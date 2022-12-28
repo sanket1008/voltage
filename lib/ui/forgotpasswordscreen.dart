@@ -4,7 +4,7 @@ import 'package:voltage/ui/forgotpasswordotpscreen.dart';
 
 import '../common/button.dart';
 import '../common/inputbox.dart';
-import 'loginscreen.dart';
+
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({Key? key}) : super(key: key);
@@ -81,11 +81,14 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     enaled: true,
                     readOnly: true,
                     isPassword: false),
-
+                SizedBox(
+                  height: 20,
+                ),
                 CommonButton(
                   text: "Proceed",
                   onPress: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
                       return const ForgotPasswordOTP();
                     }));
                   },

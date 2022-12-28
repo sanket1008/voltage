@@ -76,7 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   child: Image.asset(
                     "images/Sign_up_cuate.png",
                     fit: BoxFit.contain,
-                    width: 200,
+                    width: 170,
                   ),
                 ),
                 //const Spacer(flex: 2),
@@ -97,6 +97,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     return null;
                   },
                 ),
+                const SizedBox(height: 10),
                 InputBox(
                   controller: _emailController,
                   hintText: "Email Address",
@@ -113,6 +114,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     return null;
                   },
                 ),
+                const SizedBox(height: 10),
                 InputBox(
                   controller: _passwordController,
                   hintText: "password",
@@ -158,6 +160,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       return null;
                   },
                 ),
+                const SizedBox(height: 10),
                 InputBox(
                   controller: _confirmPasswordController,
                   hintText: "Confirm password",
@@ -208,6 +211,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       return null;
                   },
                 ),
+                const SizedBox(height: 20),
                 CommonButton(
                   text: "Sign Up",
                   onPress: () {

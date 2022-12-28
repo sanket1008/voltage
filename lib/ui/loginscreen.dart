@@ -55,16 +55,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Image.asset(
                     "images/Sign_up_cuate.png",
                     fit: BoxFit.contain,
-                    width: 200,
+                    width: MediaQuery.of(context).size.width * 0.5,
                   ),
                 ),
                 //const Spacer(flex: 2),
-                const SizedBox(height: 40),
+                const SizedBox(height: 50),
                 InputBox(
-                  header: const Text(
-                    "Email Adress",
-                    style: TextStyle(fontSize: 15.0),
-                  ),
                   controller: _emailController,
                   hintText: "Email Address",
                   boarderColor: Colors.white,
@@ -82,6 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     return null;
                   },
                 ),
+                const SizedBox(height: 10),
                 InputBox(
                   controller: _passwordController,
                   hintText: "Password",
@@ -162,26 +159,28 @@ class _LoginScreenState extends State<LoginScreen> {
                     textColor: Colors.white,
                     backGroundColor: const Color(0xFF108768)),
                 //const Spacer(flex: 4),
-                SizedBox(height: 40.0),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    const Text("don't have an account?"),
-                    Container(
-                      alignment: Alignment.centerRight,
-                      child: LinkText(
-                        text: 'Sign Up',
-                        color: const Color(0xFF108768),
-                        onPress: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return const SignUpScreen();
-                          }));
-                        },
+                Align(
+                  alignment: FractionalOffset.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      const Text("don't have an account?"),
+                      Container(
+                        alignment: Alignment.centerRight,
+                        child: LinkText(
+                          text: 'Sign Up',
+                          color: const Color(0xFF108768),
+                          onPress: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return const SignUpScreen();
+                            }));
+                          },
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),

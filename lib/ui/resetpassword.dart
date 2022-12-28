@@ -128,6 +128,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                       return null;
                     },
                   ),
+                  const SizedBox(height: 10),
                   InputBox(
                     controller: _confirmPasswordController,
                     hintText: "Confirm password",
@@ -162,7 +163,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                       return null;
                     },
                   ),
-
+                  const SizedBox(height: 30),
                   CommonButton(
                     text: "Proceed",
                     onPress: () {
